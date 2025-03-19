@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Live Event Stream</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/stream.css">
+</head>
+<body>
+    <div class="stream-container">
+        <header class="stream-header">
+            <div class="stream-logo">
+                <i class="fas fa-video"></i>
+                <h1>LiveStream</h1>
+            </div>
+            <div class="stream-info">
+                <h2 id="eventTitle">Event Stream</h2>
+                <div class="live-indicator">
+                    <span class="live-dot"></span>
+                    <span>LIVE</span>
+                </div>
+            </div>
+            <div class="user-info">
+                <span id="currentUserName"></span>
+                <button id="leaveBtn" class="btn-leave">Leave Event</button>
+            </div>
+        </header>
+        
+        <main class="stream-content">
+            <div class="video-container">
+                <div class="video-player">
+                    <video id="videoStream" controls autoplay>
+                        <source src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4" type="video/mp4">
+                        Your browser does not support the video element.
+                    </video>
+                    <div class="stream-controls">
+                        <div class="viewers-count">
+                            <i class="fas fa-users"></i>
+                            <span id="viewerCount">0</span> viewers
+                        </div>
+                    </div>
+                </div>
+                <div class="video-info">
+                    <h3>About this stream</h3>
+                    <p>Welcome to our live event! This is a sample stream for demonstration purposes.</p>
+                </div>
+            </div>
+            
+            <div class="chat-container">
+                <div class="chat-header">
+                    <h3>Live Chat</h3>
+                </div>
+                <div class="chat-messages" id="chatMessages">
+                    <!-- Chat messages will be inserted here dynamically -->
+                </div>
+                <div class="chat-input">
+                    <form id="chatForm">
+                        <input type="text" id="messageInput" placeholder="Type your message..." required>
+                        <button type="submit">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </main>
+    </div>
+    
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="js/stream.js"></script>
+</body>
+</html>

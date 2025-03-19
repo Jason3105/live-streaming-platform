@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LiveStream Platform</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="login-form">
+            <div class="logo">
+                <i class="fas fa-video"></i>
+                <h1>LiveStream</h1>
+            </div>
+            <h2>Join Live Event</h2>
+            <form id="eventForm">
+                <div class="form-group">
+                    <label for="userName">Your Name</label>
+                    <input type="text" id="userName" placeholder="Enter your name" required>
+                </div>
+                <div class="form-group">
+                    <label for="userId">User ID</label>
+                    <input type="text" id="userId" placeholder="Enter your user ID" required>
+                </div>
+                <div class="form-group">
+                    <label for="eventId">Event ID</label>
+                    <input type="text" id="eventId" placeholder="Enter event ID to join" required>
+                </div>
+                <button type="submit" class="btn-join">Join Event</button>
+            </form>
+            <div class="featured-events">
+                <h3>Featured Events</h3>
+                <div class="event-list">
+                    <div class="event-card" data-event-id="event123">
+                        <div class="event-thumbnail">
+                            <i class="fas fa-play-circle"></i>
+                        </div>
+                        <div class="event-info">
+                            <h4>Tech Conference 2025</h4>
+                            <p>Join the latest tech discussion</p>
+                        </div>
+                    </div>
+                    <div class="event-card" data-event-id="event456">
+                        <div class="event-thumbnail">
+                            <i class="fas fa-play-circle"></i>
+                        </div>
+                        <div class="event-info">
+                            <h4>Music Festival Live</h4>
+                            <p>Experience the beats live</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/main.js"></script>
+</body>
+</html>
